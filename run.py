@@ -56,6 +56,9 @@ class Parser:
                 h = c
                 continue
             if type(c) is NavigableString and c != '\n':
+                if not uls:
+                    results.append(c)
+                    break
                 if idx == 0 and len(children) > 1 and children[idx + 1].name == 'ul':
                     h = c
                     continue
@@ -165,7 +168,7 @@ my_filter = {
     "History and events": 1,
     "Human activities": 3,
     "Mathematics and logic": 1,
-    "Natural and physical sciences": 1,
+    "Natural and physical sciences": 5,
     "People and self": 1,
     "Philosophy and thinking": 1,
     "Religion and belief systems": 1,
@@ -175,6 +178,7 @@ my_filter = {
 
 
 def main():
+    # mfilter = my_filter
     mfilter = None
     parser = Parser(get_source())
     result = parser.run(mfilter)
