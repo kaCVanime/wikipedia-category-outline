@@ -12,7 +12,7 @@ proxies = {
 def get_source():
     tgt = "https://en.wikipedia.org/wiki/Wikipedia:Contents/Outlines"
 
-    fp = Path('outline_source.html')
+    fp = Path('source_outline.html')
     if fp.is_file():
         with open(fp, mode='r', encoding='utf-8') as f:
             return f.read()
@@ -182,7 +182,7 @@ def main():
     mfilter = None
     parser = Parser(get_source())
     result = parser.run(mfilter)
-    with open('outline_result.json', 'w', encoding='utf-8') as f:
+    with open('result_outline.json', 'w', encoding='utf-8') as f:
         f.write(json.dumps(result, ensure_ascii=False))
 
 

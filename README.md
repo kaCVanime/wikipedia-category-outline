@@ -1,11 +1,105 @@
-Scrape Wikipedia outline page in JSON
+Scrape Wikipedia outline and category page in JSON
 
-Source page: https://en.wikipedia.org/wiki/Wikipedia:Contents/Outlines
+Category source page: https://en.wikipedia.org/wiki/Wikipedia:Contents/Categories  
+Outline source page: https://en.wikipedia.org/wiki/Wikipedia:Contents/Outlines  
 
 #### Usage
 check `result.json` or run `run.py` to fetch latest source and filter
 
 #### Example
+
+##### category
+```
+{
+    "subject": "History and events",
+    "level": 1,
+    "children": [
+      "By period",
+      "By topic(Science·Religion)",
+      "Historiography",
+      "Timelines",
+      {
+        "subject": "History by location",
+        "level": 2,
+        "children": [],
+        "subcategory": [
+          [
+            {
+              "subject": "By continent",
+              "level": 3,
+              "children": [
+                "Africa",
+                "Asia",
+                "Europe",
+                "America"
+              ],
+              "subcategory": []
+            },
+            {
+              "subject": "By region",
+              "level": 3,
+              "children": [
+                "North America",
+                "South America",
+                "Central Europe",
+                "West Asia",
+                "Oceania"
+              ],
+              "subcategory": []
+            },
+            {
+              "subject": "By country",
+              "level": 3,
+              "children": [
+                "By city",
+                "Empires"
+              ],
+              "subcategory": []
+            }
+          ],
+          [
+            {
+              "subject": "By region",
+              "level": 3,
+              "children": [
+                "North America",
+                "South America",
+                "Central Europe",
+                "West Asia",
+                "Oceania"
+              ],
+              "subcategory": []
+            },
+            {
+              "subject": "By country",
+              "level": 3,
+              "children": [
+                "By city",
+                "Empires"
+              ],
+              "subcategory": []
+            }
+          ],
+          [
+            {
+              "subject": "By country",
+              "level": 3,
+              "children": [
+                "By city",
+                "Empires"
+              ],
+              "subcategory": []
+            }
+          ]
+        ]
+      }
+    ]
+  }
+```
+
+--- 
+
+##### outline
 ```
 {
     "subject": "Culture and the arts",
