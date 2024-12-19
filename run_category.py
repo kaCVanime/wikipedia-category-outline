@@ -84,18 +84,22 @@ class Parser:
                 i = i + 1
                 continue
             else:
+                results.append(cat)
+
                 c_level = self._get_hs_level(h)
                 p = i
                 while (p := p+1) < len(hs):
                     next_h_level = self._get_hs_level(hs[p])
-                    if next_h_level <= c_level:
-                        break
                     if next_h_level == c_level + 1:
-                        cat["subcategory"].append(self._parse(hs, p, level+1))
+                        cat["subcategory"].extend(self._parse(hs, p, level+1))
+                        continue
+                    if next_h_level <= c_level:
+                        if c_level == 0:
+                            break
+                        return results
                     if next_h_level > c_level + 1:
                         continue
 
-                results.append(cat)
                 i = p
 
         return results

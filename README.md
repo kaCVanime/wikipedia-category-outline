@@ -23,78 +23,42 @@ check `result.json` or run `run.py` to fetch latest source and filter
         "level": 2,
         "children": [],
         "subcategory": [
-          [
-            {
-              "subject": "By continent",
-              "level": 3,
-              "children": [
-                "Africa",
-                "Asia",
-                "Europe",
-                "America"
-              ],
-              "subcategory": []
-            },
-            {
-              "subject": "By region",
-              "level": 3,
-              "children": [
-                "North America",
-                "South America",
-                "Central Europe",
-                "West Asia",
-                "Oceania"
-              ],
-              "subcategory": []
-            },
-            {
-              "subject": "By country",
-              "level": 3,
-              "children": [
-                "By city",
-                "Empires"
-              ],
-              "subcategory": []
-            }
-          ],
-          [
-            {
-              "subject": "By region",
-              "level": 3,
-              "children": [
-                "North America",
-                "South America",
-                "Central Europe",
-                "West Asia",
-                "Oceania"
-              ],
-              "subcategory": []
-            },
-            {
-              "subject": "By country",
-              "level": 3,
-              "children": [
-                "By city",
-                "Empires"
-              ],
-              "subcategory": []
-            }
-          ],
-          [
-            {
-              "subject": "By country",
-              "level": 3,
-              "children": [
-                "By city",
-                "Empires"
-              ],
-              "subcategory": []
-            }
-          ]
+          {
+            "subject": "By continent",
+            "level": 3,
+            "children": [
+              "Africa",
+              "Asia",
+              "Europe",
+              "America"
+            ],
+            "subcategory": []
+          },
+          {
+            "subject": "By region",
+            "level": 3,
+            "children": [
+              "North America",
+              "South America",
+              "Central Europe",
+              "West Asia",
+              "Oceania"
+            ],
+            "subcategory": []
+          },
+          {
+            "subject": "By country",
+            "level": 3,
+            "children": [
+              "By city",
+              "Empires"
+            ],
+            "subcategory": []
+          }
         ]
       }
     ]
-  }
+  },
 ```
 
 --- 
